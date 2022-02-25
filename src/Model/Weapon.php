@@ -2,15 +2,11 @@
 
 namespace Manuel\GamePhp\Model;
 
-enum WeaponTypes
-{
-    case SHORT;
-    case LONG;
-}
+use Manuel\GamePhp\Data\WeaponTypes;
+use Manuel\GamePhp\Dto\WeaponDTO;
 
 class Weapon extends Item
 {
-
     private WeaponTypes $type;
     private float $damage;
 
@@ -30,7 +26,7 @@ class Weapon extends Item
         $this->damage = $damage;
     }
 
-    public function __construct($props)
+    public function __construct(WeaponDTO $props)
     {
         $this->damage = $props->damage;
         parent::__construct($props);
