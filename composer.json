@@ -14,10 +14,14 @@
         }
     ],
     "scripts": {
-        "start": ["@php index.php"]
+        "start": ["@php index.php"],
+        "test": "@php -d xdebug.remote_autostart=Off -d xdebug.remote_enable=Off vendor/bin/phpunit"
     },
     "require": {
         "spatie/data-transfer-object": "^3.7",
         "gabrielrcouto/php-gui": "^0.1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
     }
 }
