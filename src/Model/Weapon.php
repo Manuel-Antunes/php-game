@@ -9,6 +9,12 @@ class Weapon extends Item
 {
     private WeaponTypes $type;
     private float $damage;
+    public function __construct(WeaponDTO $props)
+    {
+        parent::__construct($props);
+        $this->damage = $props->damage;
+        $this->type = $props->type;
+    }
 
     /**
      * @return float
@@ -24,11 +30,5 @@ class Weapon extends Item
     public function setDamage(float $damage): void
     {
         $this->damage = $damage;
-    }
-
-    public function __construct(WeaponDTO $props)
-    {
-        $this->damage = $props->damage;
-        parent::__construct($props);
     }
 }
