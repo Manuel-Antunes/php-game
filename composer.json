@@ -1,0 +1,23 @@
+{
+    "name": "manuel/game-php",
+    "description": "sla man",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Manuel\\GamePhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Manuel-Antunes",
+            "email": "nerdbroz2@gmail.com"
+        }
+    ],
+    "scripts": {
+        "start": ["@php index.php"]
+    },
+    "require": {
+        "spatie/data-transfer-object": "^3.7",
+        "gabrielrcouto/php-gui": "^0.1.1"
+    }
+}
